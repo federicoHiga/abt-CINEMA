@@ -1,0 +1,14 @@
+.link{
+    display: flex;
+}
+
+.de{
+    font-size: 50px;
+    color: black;
+}
+
+.Cine{
+    font-size: 50px;
+    color: black;
+    font-family: 'Anton', sans-serif;
+}
