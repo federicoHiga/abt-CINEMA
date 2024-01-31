@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-// import all_products from "../Components/Assets/allProducts";
+import all_products from "../Components/Assets/allProducts";
 import { search } from "../Fake-api/api";
 
 export const ShopContext = createContext(null);
@@ -12,14 +12,14 @@ const ShopContextProvider = (props) =>{
    * get generla al db
    */
 
-    const [all_products, setAll_products] = useState([]);
+  //   const [all_products, setAll_products] = useState([]);
 
-    const endPoint = '/all_products'
+  //   const endPoint = '/all_products'
 
-    useEffect(()=>{
-      search(endPoint, setAll_products).catch(()=>{
-      })
-  }, [])
+  //   useEffect(()=>{
+  //     search(endPoint, setAll_products).catch(()=>{
+  //     })
+  // }, [])
 
   console.log('all_products(get): ',all_products)
 
@@ -32,31 +32,32 @@ const ShopContextProvider = (props) =>{
   /**
    * 
    * deja el cart en 0 listo para usar
-   */
+   *este getDefaultCart usa .lenght, el cual nmo es compatible con un objeto json*/
 
-//   const getDefaultCart = ()=>{ *este getDefaultCart usa .lenght, el cual nmo es compatible con un objeto json
+  const getDefaultCart = ()=>{ 
 
-//     let cart = {};
-//     for (let index = 0; index < all_products.length+1; index++) {
-//         cart[index] = 0;
-//     }
-//     return cart;
-// }
+    let cart = {};
+    for (let index = 0; index < all_products.length+1; index++) {
+        cart[index] = 0;
+    }
+    return cart;
+}
 
-const getDefaultCart = () => {
-  let cart = {};
+// const getDefaultCart = () => {
+//   let cart = {};
 
-  // Get the product IDs from the JSON object
-  const productIds = Object.keys(all_products);
+//   // Get the product IDs from the JSON object
+//   const productIds = Object.keys(all_products);
+//   console.log(productIds)
 
-  // Iterate through the product IDs
-  for (const productId in productIds) {
-    // Use JSON.stringify to ensure valid property names
-    cart[JSON.stringify(productId)] = 1;
-  }
+//   // Iterate through the product IDs
+//   for (const productId in productIds) {
+//     // Use JSON.stringify to ensure valid property names
+//     cart[JSON.stringify(productId)] = 1;
+//   }
 
-  return cart;
-};
+//   return cart;
+// };
 
 
 

@@ -68,7 +68,7 @@ let all_products =[
     {
         id: 7,
         name: "Rick and Morty",
-        img: "https://bigboxoutletstore.ca/cdn/shop/files/71uXrOMUOZL._AC_SL1500_551x700.jpg?v=1702324783",
+        img: "https://images.blu-ray.com/news/upload/12630.jpg",
         category: "serie",
         new_price: 30.00,
         old_price: 40.00,
@@ -98,17 +98,7 @@ let all_products =[
         language: "English",
         format: "Blu-ray"
     },
-    {
-        id: 10,
-        name: "Rocky II",
-        img: "https://a.allegroimg.com/original/111c65/7f3ba648430a84d6c73e6acdf770/ROCKY-II-Sylvester-Stallone-BLU-RAY",
-        category: "movie",
-        new_price: 30.00,
-        old_price: 40.00,
-        gender: "Drama",
-        language: "English",
-        format: "Blu-ray"
-    },
+
 ];
 
 export default all_products;
